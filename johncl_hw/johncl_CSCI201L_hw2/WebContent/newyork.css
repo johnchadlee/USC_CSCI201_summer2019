@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+.HeaderBar {
+  background-color: black;
+  padding: 15px;
+  overflow: hidden;
+}
+.HeaderBar a.active {
+  background-color: black;
+  color: white;
+  font-style: oblique;
+  font-size: 25px;
+}
+
+
+/*SearchBar*/
+.SearchBar input[type=text] {
+  display: inline-block;
+  background-color: white;
+  padding: 6px;
+  border: none;
+  top:30px;
+  right:250px;
+  font-size: 17px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: white;
+}
+
+.SearchBar input[type="submit"] {
+    margin-left: -50px;
+    height: 20px;
+    width: 50px;  
+    transform: translate(-50%, -50%);
+    position: absolute;  
+}
+
+.SearchBar button {
+  margin-left: 50px;
+  padding: 3px;
+  curser: pointer;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 30px;
+  right:300px;  
+}
+
+.container1 {
+  display: in line;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  right:-750px;
+  top:-25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 70%;
+}
+
+.container1:hover input ~ .checkmark {
+  background-color: #d9d9d9;
+}
+
+.container1 input:checked ~ .checkmark {
+  background-color: #f36f67;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container1 input:checked ~ .checkmark:after {
+  display: block;
+}
+.container1 .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container2 {
+  position: relative;
+  width: 25%;
+}
+
+/* Make the image to responsive */
+.image {
+  width: 35%;
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 35%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.container2:hover .overlay {
+  transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}

@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* Background Image */
+.background-img {
+	background-image: url("Images/Black Vignette.png"),
+		url("Images/background.jpg");
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	transform: scale(1.1);
+}
+
+/* Topbar */
+.topbar {
+	margin-top: 0px;
+	background-color: #000;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	z-index: 2;
+	color: #fff;
+	text-align: left;
+	padding-bottom: 40px;
+	padding-left: 30px;
+	padding-top: 0px;
+}
+
+/* WeatherMeister */
+h1 {
+	font-family: Sav;
+	font-size: 50px;
+}
+
+/* FONTS */
+
+/* WeatherMeister */
+@font-face {
+	font-family: Sav;
+	src: url("Fonts/17357674296594851838.woff");
+}
+
+/* Display All */
+@font-face {
+	font-family: Reg;
+	src: url("Fonts/Avenir Next/AvenirNext-Regular.ttf");
+}
+
+/* Search Bar */
+@font-face {
+	font-family: Ital;
+	src: url("Fonts/Avenir Next/AvenirNext-UltraLightItalic.ttf");
+}
+
+/* Radio Buttons */
+@font-face {
+	font-family: UL;
+	src: url("Fonts/Avenir Next/AvenirNext-UltraLight.ttf");
+}
+
+/* Div to Show City Search */
+.showCitySearch {
+	display: block;
+}
+
+/* Div to Show Location Search */
+.showLocationSearch {
+	position: fixed;
+	display: none;
+	background-color: transparent;
+	z-index: 5;
+	width: 471px;
+	height: 100px;
+	left: 45%;
+	top: 4%;
+	font-color: #fff;	
+}
+
+/* Radio Button */
+.radio-button-div {
+	position: absolute;
+	font-family: UL;
+	color: #fff;
+	z-index: 7;
+	left: 100%;
+	top: 35%;
+	width: 220px;
+}
+
+/* Search Bar, Radio Buttons, Display All */
+.nav {
+	background-color: transparent;
+	position: fixed;
+	z-index: 5;
+	width: 471px;
+	height: 50px;
+	left: 45%;
+	top: 4%;
+	font-color: #fff;	
+}
+
+/* Search Bar, Radio Buttons */
+.nav .search-container {
+	float: right;
+}
+
+/* Magnifying Glass Button */
+.nav .search-container button {
+	background-image: url("Images/magnifying_glass.jpeg");
+	background-size: 85%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgba(255, 255, 255, .25);
+	width: 39px;
+	height: 39px;
+	float: right;
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 17px;
+	font-size: 17px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	border-left: none;
+	cursor: pointer;
+}
+
+/* City Search Bar */
+.nav input[type=text] {
+	background: rgba(255, 255, 255, .25);
+	padding: 7px;
+	margin-top: 8px;
+	width: 400px;
+	font-size: 17px;
+	font-family: Ital;
+	color: white;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: none;
+}
+
+/* Location Search Bar */
+#LatitudeSearch {
+	background: rgba(255, 255, 255, .25);
+	position: absolute;
+	padding: 7px;
+	margin-top: 8px;
+	width: 199px;
+	font-size: 17px;
+	font-family: Ital;
+	color: white;
+	border: 1px solid white;
+}
+#LongitudeSearch {
+	background: rgba(255, 255, 255, .25);
+	position: absolute;
+	padding: 7px;
+	margin-top: 8px;
+	margin-left: 240px;
+	width: 160px;
+	font-size: 17px;
+	font-family: Ital;
+	color: white;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: none;
+}
+
+/* Search Results */
+h2 {
+	position: absolute;
+	font-size: 50px;
+	z-index: 8;
+	font-family: Reg;
+	color: #fff;
+	top: 10%;
+	left: 3%;
+	
+}
+
+/* Table for one city */
+#infoTable {
+	display: block;
+	font-family: Reg;
+	position: absolute;
+	top: 25%;
+	left: 3%;
+	width: 1060px;
+	height: 500px;
+	font-size: 30px;
+	background-color: white;
+	z-index: 5;
+	border-radius: 40px;
+	border: 1px solid white;
+	background: rgba(255,255,255,0.25);
+	text-align: center;
+	color: #DCDCDC;	
+	overflow: auto;
+}
+
+#infoTable tr td{
+	height: 53px;
+	width: 350px;
+	border-top: 1px solid white;
+}
+#infoTable th{
+	height: 75px;
+}

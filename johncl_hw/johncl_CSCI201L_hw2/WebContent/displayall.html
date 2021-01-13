@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>WeatherMeister</title>
+	<link rel="stylesheet" type="text/css" href="displayall.css" />
+	</head>
+	<body style="background-image:url(images/background.jpg);background-repeat:no-repeat;background-position: center;background-size = cover;background-attachment: fixed;background-image-webkit-filter: blur(16px);overflow: hidden;background-image-webkit-filter: brightness(50%);position:relative">
+		<div class="HeaderBar">
+		  <a class="active" href="index.html">Weather Meister</a>
+		  	<div class="SearchBar">
+				<form action="GET">
+				<input type="text" placeholder="Search.." name = "search">	
+					<button type="submit">
+						<img class="button" src="images/magnifying_glass.jpeg" width = "23" height = "23" />
+					</button>
+				</form>
+			</div>
+			<label class="container">City
+			    <input type="radio" checked="checked" name ="choice">
+			    <span class="checkmark"></span>
+			</label>
+			<label class="container">Location(Lat./Long.)
+				<input type="radio" name = "choice">
+				<span class="checkmark"></span>
+			</label>
+	    </div>
+		<div class="top-left" >All Cities
+		<font size="14px" face="brace" color=orange>
+			<table border= solid; id="myTable">
+			  <tr class="header">
+			    <th style="width:2%;">City Names</th>
+			    <th style="width:2%;">Temp.Low</th>
+			    <th style="width:2%;">Temp.High</th>
+			  </tr>
+			  <tr>
+			    <td>Los Angeles</td>
+			    <td>54</td>
+			    <td>72</td>
+			  </tr>
+			  <tr>
+			    <td>New York</td>
+			    <td>23</td>
+			    <td>37</td>
+			  </tr>
+			  <tr>
+			    <td>Chicago</td>
+			    <td>42</td>
+			    <td>69</td>
+			  </tr>
+			</table>
+		</font>
+		</div>
+		<div class="dropdown">
+	  		<button class="dropbtn">Sort By</button>
+		  		<div class="dropdown-content">
+			   	 	<a href="#">City Name A-Z</a>
+			   	 	<a href="#">City Name Z-A</a>
+			   	 	<a href="#">Temp.Low ASC</a>
+			   	 	<a href="#">Temp.Low DESC</a>
+			   	 	<a href="#">Temp.High ASC</a>
+			   	 	<a href="#">Temp.High DESC</a>
+		  		</div>
+	    </div>
+	</body>
+</html>

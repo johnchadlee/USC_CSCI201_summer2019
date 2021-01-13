@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+.HeaderBar {
+  background-color: black;
+  padding: 15px;
+  overflow: hidden;
+}
+.HeaderBar a.active {
+  background-color: black;
+  color: white;
+  font-style: oblique;
+  font-size: 25px;
+}
+.top-left {
+  position: absolute;
+  color: orange;
+  font-size: 70px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  top: 100px;
+  left: 80px;
+  width:60%;
+}
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%; 
+  border: border-style: solid;
+  position:relative;
+  text-align: left;
+  font-size:35px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: solid #434343; 
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #434343;
+}
+
+/*Sort by dropdown*/
+.dropbtn {
+  background-color: #434343;
+  color: white;
+  padding: 16px;
+  border: none;
+  font-size: 35px;
+
+    right: 200px;
+  top: 200px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  right: -1000px;
+  top: 90px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #434343;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: white}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #434343;
+}
+
+/*SearchBar*/
+.SearchBar input[type=text] {
+  display: inline-block;
+  background-color: white;
+  padding: 6px;
+  border: none;
+  top:30px;
+  right:250px;
+  font-size: 17px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: white;
+}
+
+.SearchBar input[type="submit"] {
+    margin-left: -50px;
+    height: 20px;
+    width: 50px;  
+    transform: translate(-50%, -50%);
+    position: absolute;  
+}
+
+.SearchBar button {
+  margin-left: 50px;
+  padding: 3px;
+  curser: pointer;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 30px;
+  right:300px;  
+}
+
+.container {
+  display: in line;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  right:-900px;
+  top:-25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 70%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #d9d9d9;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #f36f67;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+/* Background Image */
+body{
+		background-image: url("Images/Black Vignette.png"),
+		url("Images/background.jpg");
+		
+}
+.background-img {
+	background-image: url("Images/Black Vignette.png"),
+		url("Images/background.jpg");
+	background-repeat: no-repeat;
+	position: relative;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	transform: scale(1.1);
+}
+.topbar {
+	margin-top: -1%;
+	background-color: #000;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	z-index: 2;
+	text-align: left;
+	vertical-align: middle;
+	padding-bottom: 3.5%;
+	padding-left: 3%;
+	  display: inline-block;
+}
+h1 {
+	font-family: Sav;
+	font-size: 70px;
+}
+h2 {
+	font-size: 30px;
+}
+
+@font-face {
+	font-family: Sav;
+	src: url("Fonts/17357674296594851838.woff");
+}
+.login {
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 250px;
+  padding: 70px 30px;
+  background-color: transparent;
+}
+
+.avator {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius:50%;
+	overflow: hidden;
+	top:calc(-80px/2);
+	left: calc(50% - 40px);
+}
+.box {
+	position: absolute;
+	padding: 16px;
+}
+.login .box b{
+	color: white;
+}
+.login .box button {
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.login .box button:hover {
+  opacity: 0.8;
+}
+.login .box input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+

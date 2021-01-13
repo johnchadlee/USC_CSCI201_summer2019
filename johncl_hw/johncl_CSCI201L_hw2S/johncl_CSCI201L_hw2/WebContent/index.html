@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>WeatherMeister</title>
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	</head>
+	<body>
+		<div class="HeaderBar">
+		  <a class="active" href="#home">Weather Meister</a>
+		</div>
+		<div class="background-image"></div>
+		<div><img class = "logo" src="images/logo.png"></img></div>
+		<div class="SearchBar">
+			<form action="index.php" method="post">
+			<input type="text" placeholder="Search.." name = "search">	
+			<button type="submit">
+				<img class="button" src="images/magnifying_glass.jpeg" width = "23" height = "23" />
+			</button>
+			</form>
+		</div>
+		<label class="container">City
+		    <input type="radio" checked="checked" name ="choice">
+		    <span class="checkmark"></span>
+		</label>
+		<label class="container">Location(Lat./Long.)
+			<input type="radio" name = "choice">
+			<span class="checkmark"></span>
+		</label>
+		<a href="displayall.html" class="DisplayAll">Display All</a>
+		
+	</body>
+</html>

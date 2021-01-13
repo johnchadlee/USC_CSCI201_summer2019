@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+/* Background Image */
+.background-img {
+	background-image: url("Images/Black Vignette.png"),
+		url("Images/background.jpg");
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	transform: scale(1.1);
+}
+
+/* Topbar */
+.topbar {
+	margin-top: -1%;
+	background-color: #000;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	z-index: 2;
+	text-align: left;
+	vertical-align: middle;
+	padding-bottom: 3.5%;
+	padding-left: 3%;
+}
+
+/* WeatherMeister */
+h1 {
+	font-family: Sav;
+	font-size: 70px;
+}
+
+/* FONTS */
+
+/* WeatherMeister */
+@font-face {
+	font-family: Sav;
+	src: url("Fonts/17357674296594851838.woff");
+}
+
+/* Display All */
+@font-face {
+	font-family: Reg;
+	src: url("Fonts/Avenir Next/AvenirNext-Regular.ttf");
+}
+
+/* Search Bar */
+@font-face {
+	font-family: Ital;
+	src: url("Fonts/Avenir Next/AvenirNext-UltraLightItalic.ttf");
+}
+/* Table Header */
+@font-face {
+	font-family: Bold;
+	src: url("Fonts/Avenir Next/AvenirNext-Bold.ttf");
+}
+
+/* Radio Buttons */
+@font-face {
+	font-family: UL;
+	src: url("Fonts/Avenir Next/AvenirNext-UltraLight.ttf");
+}
+
+/* Div to Show City Search */
+.showCitySearch {
+	display: block;
+}
+
+/* Div to Show Location Search */
+.showLocationSearch {
+	position: fixed;
+	display: none;
+	background-color: transparent;
+	z-index: 5;
+	width: 471px;
+	height: 100px;
+	left: 45%;
+	top: 4%;
+	font-color: #fff;	
+}
+
+/* Radio Button */
+.radio-button-div {
+	font-family: UL;
+	color: #fff;
+	z-index: 7;
+	right: 11%;
+	top: 3%;
+	position: fixed;
+	font-size: 25px;
+	font-family: UL;
+	color: #fff;
+}
+
+/* Search Bar, Radio Buttons, Display All */
+.nav {
+	background-color: transparent;
+	position: fixed;
+	z-index: 5;
+	width: 471px;
+	height: 50px;
+	left: 45%;
+	top: 4%;
+	font-color: #fff;	
+}
+
+/* Search Bar, Radio Buttons */
+.nav .search-container {
+	float: right;
+}
+
+/* Magnifying Glass Button */
+.nav .search-container button {
+	background-image: url("Images/magnifying_glass.jpeg");
+	background-size: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: white;
+	position: fixed;
+	width: 4%;
+	height: 6.4%;
+	float: right;
+	right: 28%;
+	top: 1.5%;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	border-left: none;
+	cursor: pointer;
+}
+
+/* City Search Bar */
+.nav input[type=text] {
+	position: fixed;
+	background: white;
+	padding: 0.75%;
+	height: 3.6%;
+	right: 31.9%;
+	top: 1.5%;
+	width: 20.15%;
+	font-size: 25px;
+	font-family: Ital;
+	color: black;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: none;
+}
+
+/* Location Search Bar */
+#LatitudeSearch {
+	background: white;
+	position: fixed;
+	left:46.5%;
+	top: 1.5%;
+	height: 3.6%;
+	padding: 0.75%;
+	width: 10%;
+	font-size: 25px;
+	font-family: Ital;
+	color: black;
+	border: 1px solid white;
+}
+#LongitudeSearch {
+	background: white;
+	position: fixed;
+	left: 59.56%;
+	top: 1,5%;
+	width: 6.95%;
+	height: 3.6%;
+	font-size: 25px;
+	font-family: Ital;
+	color: black;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: none;
+	padding: 0.75%;
+}
+
+/* All Cities */
+h2 {
+	position: absolute;
+	font-size: 70px;
+	z-index: 8;
+	font-family: Reg;
+	color: #fff;
+	top: 8%;
+	left: 4%;
+	
+}
+
+/* All Cities Table */
+#infoTable {
+	display: block;
+	font-family: Reg;
+	position: absolute;
+	top: 25%;
+	left: 4%;
+	width: 70%;
+	height: 60%;
+	font-size: 50px;
+	background-color: white;
+	z-index: 5;
+	border-radius: 15px;
+	border: 1px solid white;
+	background: rgba(255,255,255,0.25);
+	text-align: center;
+	color: white;	
+	overflow: auto;
+}
+
+#infoTable tr td{
+	height: 72px;
+	width: 450px;
+	border-top: 1px solid white;
+	font-family: UL;
+}
+#infoTable th{
+	line-height: 200%;
+	font-family: Bold;
+	font-size: 50px;
+	color: white;
+	
+}
+
+/* Drop down menu */
+#custom-select {
+  position: fixed;
+  font-family: Reg;
+  height: 5.6%;
+  width: 19.5%; 
+  z-index: 14;
+  right: 4.5%;
+  top: 32%;
+  background-color: white;
+}
+
+#custom-select select {
+	font-size: 45px;
+	font-family: Reg;
+}
+
+/* Sort by: */
+.sortBy {
+	position: fixed;
+	color: white;
+	right: 10%;
+ 	top: 24%;
+ 	font-family: Reg;
+ 	font-size: 50px;
+ 	z-index: 8;
+}

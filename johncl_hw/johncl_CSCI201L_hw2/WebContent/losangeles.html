@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Los Angeles</title>
+		<link rel="stylesheet" type="text/css" href="losangeles.css" />
+	</head>
+	<body style="background-image:url(images/background.jpg);background-repeat:no-repeat;background-position: center;background-size = cover;background-attachment: fixed;background-image-webkit-filter: blur(16px);overflow: hidden;background-image-webkit-filter: brightness(50%);position:relative">
+			<div class="HeaderBar">
+			  <a class="active" href="#home">Weather Meister</a>
+			  	<div class="SearchBar">
+					<form action="GET">
+					<input type="text" placeholder="Search.." name = "search">	
+						<button type="submit">
+							<img class="button" src="images/magnifying_glass.jpeg" width = "23" height = "23" />
+						</button>
+					</form>
+				</div>
+				<label class="container1">City
+				    <input type="radio" checked="checked" name ="choice">
+				    <span class="checkmark"></span>
+				</label>
+				<label class="container1">Location(Lat./Long.)
+					<input type="radio" name = "choice">
+					<span class="checkmark"></span>
+				</label>
+		    </div>
+		      <div class="row">
+			      <div class="container2">
+				      <div class='column'>
+						  <img src="images/planet-earth.png" alt="location" class="image">
+						  <div class="overlay">
+						    <div class="text">location</div>
+						  </div>
+					  </div>
+			      </div>
+			      <div class="container2">
+					  <div class='column'>
+						  <img src="images/snowflake.png" alt="Temp Low" class="image">
+						  <div class="overlay">
+						    <div class="text">temp low</div>
+						  </div>
+					  </div>
+				 </div>	  
+				 <div class="container2">
+					  <div class='column'>
+						  <img src="images/sun.png" alt="Temp High" class="image">
+						  <div class="overlay">
+						    <div class="text">temp high</div>
+						  </div>
+				      </div>
+				 </div>	   
+				 <div class="container2">  
+				      <div class='column'>
+						  <img src="images/wind.png" alt="wind" class="image">
+						  <div class="overlay">
+						    <div class="text">Wind</div>
+						  </div>
+					  </div>
+				</div>  
+			</div>
+			  <div class="row">
+			  <div class="container2">
+			  	  <div class='column'>
+					  <img src="images/drop.png" alt="humidity" class="image">
+					  <div class="overlay">
+					    <div class="text">humidity</div>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="container2">
+				  <div class='column'>
+					  <img src="images/LocationIcon.png" alt="coordinate" class="image">
+					  <div class="overlay">
+					    <div class="text">coordinate</div>
+					  </div>
+				  </div>
+			 </div>	  
+			 <div class="container2">
+				  <div class='column'>
+					  <img src="images/thermometer.png" alt="Current Temp" class="image">
+					  <div class="overlay">
+					    <div class="text">current temp</div>
+					  </div>
+				  </div>
+			 </div>	  
+		     <div class="container2">
+ 				  <div class='column'>
+					  <img src="images/sunrise-icon.png" alt="Sunrise/set" class="image">
+					  <div class="overlay">
+					    <div class="text">sunrise/set</div>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+	</body>
+</html>

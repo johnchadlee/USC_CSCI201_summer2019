@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.background-image {
+  background-image: url("images/background.jpg");
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+  -webkit-filter: blur(2px);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.HeaderBar {
+  background-color: black;
+  padding: 15px;
+  overflow: hidden;
+}
+.HeaderBar a.active {
+  background-color: black;
+  color: white;
+  font-style: oblique;
+  font-size: 25px;
+}
+.logo {
+ 	top: 50%;
+	left: 50%;
+    width: 400px;
+    height: 300px;
+ 	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.SearchBar input[type=text] {
+  display: inline-block;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  padding: 6px;
+  border: none;
+  top:73%;
+  left:50%;
+  font-size: 17px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: white;
+}
+
+.SearchBar input[type="submit"] {
+    margin-left: -50px;
+    height: 20px;
+    width: 50px;  
+    transform: translate(-50%, -50%);
+    position: absolute;  
+}
+
+.SearchBar button {
+  margin-left: 50px;
+  right: 500px;/*attribute*/
+  top: 510px;/*attribute*/
+  padding: 3px;
+  curser: pointer;
+  transform: translate(-50%, -50%);
+  position: absolute;  
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-left: 50px;
+  right: -480px;
+  top: -230px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #d9d9d9;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #5155f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.DisplayAll{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  href: url("displayall.html");
+  padding: 6px;
+  border: none;
+  top:90%;
+  left:50%;
+  font-size: 17px;
+  color: white;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}

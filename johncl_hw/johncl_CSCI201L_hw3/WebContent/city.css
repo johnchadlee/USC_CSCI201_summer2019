@@ -1,0 +1,458 @@
+@charset "UTF-8";
+
+/* Background Image */
+.background-img {
+	background-image: url("Images/Black Vignette.png"),
+		url("Images/background.jpg");
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	transform: scale(1.1);
+}
+
+/* Topbar */
+.topbar {
+	margin-top: -1%;
+	background-color: #000;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	z-index: 2;
+	text-align: left;
+	vertical-align: middle;
+	padding-bottom: 3.5%;
+	padding-left: 3%;
+}
+
+/* WeatherMeister */
+h1 {
+	font-family: Sav;
+	font-size: 70px;
+}
+
+/* FONTS */
+
+/* WeatherMeister */
+@font-face {
+	font-family: Sav;
+	src: url("Fonts/17357674296594851838.woff");
+}
+
+/* Display All */
+@font-face {
+	font-family: Reg;
+	src: url("Fonts/Avenir Next/AvenirNext-Regular.ttf");
+}
+
+/* Search Bar */
+@font-face {
+	font-family: Ital;
+	src: url("Fonts/Avenir Next/AvenirNext-UltraLightItalic.ttf");
+}
+
+/* Radio Buttons */
+@font-face {
+	font-family: UL;
+	src: url("Fonts/Avenir Next/AvenirNext-UltraLight.ttf");
+}
+
+/* Div to Show City Search */
+.showCitySearch {
+	display: block;
+}
+
+/* Div to Show Location Search */
+.showLocationSearch {
+	position: fixed;
+	display: none;
+	background-color: transparent;
+	z-index: 5;
+	width: 471px;
+	height: 100px;
+	left: 45%;
+	top: 4%;
+	font-color: #fff;	
+}
+
+/* Radio Button */
+.radio-button-div {
+	font-family: UL;
+	color: #fff;
+	z-index: 7;
+	right: 11%;
+	top: 3%;
+	position: fixed;
+	font-size: 25px;
+	font-family: UL;
+	color: #fff;
+}
+
+/* Search Bar, Radio Buttons, Display All */
+.nav {
+	background-color: transparent;
+	position: fixed;
+	z-index: 5;
+	width: 471px;
+	height: 50px;
+	left: 45%;
+	top: 4%;
+	font-color: #fff;	
+}
+
+/* Search Bar, Radio Buttons */
+.nav .search-container {
+	float: right;
+}
+
+/* Magnifying Glass Button */
+.nav .search-container button {
+	background-image: url("Images/magnifying_glass.jpeg");
+	background-size: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: white;
+	position: fixed;
+	width: 4%;
+	height: 6.4%;
+	float: right;
+	right: 28%;
+	top: 1.5%;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	border-left: none;
+	cursor: pointer;
+}
+
+/* City Search Bar */
+.nav input[type=text] {
+	position: fixed;
+	background: white;
+	padding: 0.75%;
+	height: 3.6%;
+	right: 31.9%;
+	top: 1.5%;
+	width: 20.15%;
+	font-size: 25px;
+	font-family: Ital;
+	color: black;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: none;
+}
+
+/* Location Search Bar */
+#LatitudeSearch {
+	background: white;
+	position: fixed;
+	left:46.5%;
+	top: 1.5%;
+	height: 3.6%;
+	padding: 0.75%;
+	width: 10%;
+	font-size: 25px;
+	font-family: Ital;
+	color: black;
+	border: 1px solid white;
+}
+#LongitudeSearch {
+	background: white;
+	position: fixed;
+	left: 59.56%;
+	top: 1,5%;
+	width: 6.95%;
+	height: 3.6%;
+	font-size: 25px;
+	font-family: Ital;
+	color: black;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: none;
+	padding: 0.75%;
+}
+
+/* City Name */
+h2 {
+	position: absolute;
+	font-size: 70px;
+	z-index: 8;
+	font-family: Reg;
+	color: #fff;
+	top: 8%;
+	left: 4%;
+	
+}
+
+/* Words */
+.location {
+	
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 15.5%;
+	top: 47%;
+}
+.tempLow {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 34.4%;
+	top: 47%;
+}
+.tempHigh {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 55%;
+	top: 47%;
+}
+.wind {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 78%;
+	top: 47%;
+}
+.humidity {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 15%;
+	top: 76%;
+}
+.coords {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 33.5%;
+	top: 76%;
+}
+.currTemp {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 53.5%;
+	top: 76%;
+	
+}
+.sun {
+	position: fixed;
+	z-index: 10;
+	color: #fff;
+	font-family: Reg;
+	font-size: 45px;
+	left: 75.5%;
+	top: 76%;
+}
+
+/* Icons */
+#location-img {
+	background-image: url("Images/planet-earth.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 11;
+	width: 200px;
+	height: 200px;
+	left: 15%;
+	top: 27%;
+}
+#tempLow-img {
+	background-image: url("Images/snowflake.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 34.5%;
+	top: 27%;
+}
+#tempHigh-img {
+	background-image: url("Images/sun.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 55.5%;
+	top: 27%;
+}
+#wind-img {
+	background-image: url("Images/wind.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 76%;
+	top: 27%;
+}
+#humidity-img {
+	background-image: url("Images/drop.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 14.5%;
+	top: 56%;
+}
+#coords-img {
+	background-image: url("Images/LocationIcon.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 34.5%;
+	top: 56%;
+}
+
+#currTemp-img {
+	background-image: url("Images/thermometer.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 55.5%;
+	top: 56%;
+}
+
+#sun-img {
+	background-image: url("Images/sunrise-icon.png");
+	background-size: cover;
+	position: fixed;
+	z-index: 10;
+	width: 200px;
+	height: 200px;
+	left: 76%;
+	top: 56%;
+}
+
+/* Details */
+#location-dtls {
+	display:none;
+	font-family: Reg;
+	text-align: center;
+	font-size: 45px;
+	color: white;
+	position: fixed;
+	z-index: 11;
+	height: 200px;
+	width: 300px;
+	left: 12%;
+	top: 32%;
+}
+#tempLow-dtls {
+	display: none;
+	font-family: Reg;
+	font-size: 45px;
+	color: white;
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 32%;
+	top: 29%;
+}
+#tempHigh-dtls {
+	display: none;
+	color: white;
+	text-align: center;
+	font-family: Reg;
+	font-size: 45px;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 53%;
+	top: 29%;
+}
+#wind-dtls {
+	display: none;
+	color: white;
+	text-align: center;
+	font-family: Reg;
+	font-size: 45px;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 73%;
+	top: 32%;
+}
+#humidity-dtls {
+	display: none;
+	color: white;
+	text-align: center;
+	font-family: Reg;
+	font-size: 45px;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 12.5%;
+	top: 64%;
+}
+#coords-dtls {
+	display: none;
+	color: white;
+	text-align: center;
+	font-family: Reg;
+	font-size: 45px;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 32.5%;
+	top: 61%;
+}
+#currTemp-dtls {
+	display: none;
+	color: white;
+	text-align: center;
+	font-family: Reg;
+	font-size: 45px;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 53%;
+	top: 57.5%;
+}
+#sun-dtls {
+	display: none;
+	color: white;
+	text-align: center;
+	font-family: Reg;
+	font-size: 45px;
+	position: fixed;
+	z-index: 10;
+	width: 300px;
+	height: 200px;
+	left: 73.5%;
+	top: 61%;
+}
