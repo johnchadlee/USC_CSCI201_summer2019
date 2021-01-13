@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Web Chat Client</title>
+	<script>
+		var socket; //Typeless
+		function connectToServer(){
+			socket = new WebSocket("ws://localhost:8080/CSCI201_WebSockets/ServerWs");
+			System.out.println("HERE");
+			socket.onopen = function(event){
+				document.getElementById("mychat").innerHTML += "Connected!<br />";
+			}
+			socket.onmessage = function(event){
+				document.getElementById("mychat").innerHTML += event.data + "<br />";
+			}
+			socket.onclose = function(event){
+				document.getElementById("mychat").innerHTML += "Disconnected!<br />";
+			}
+		}
+		function sendMessage(){
+			socket.send("voodoo: " + document.chatform.message.value);
+			return false;
+		}
+	</script>
+	</head>
+	<body onload="connectToServer()">
+		<form name="chatform" onsubmit="return sendMessage();">
+			<input type="text" name="message" /><br/>
+			<input type="submit" name="submit" value="Send Message" />
+		</form>
+		<br />
+		<div id="mychat"></div>
+	</body>
+</html>

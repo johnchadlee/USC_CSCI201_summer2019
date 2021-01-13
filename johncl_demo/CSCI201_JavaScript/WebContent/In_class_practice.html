@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript Form Validation</title>
+		<script>
+			function validateFirstName() {
+				if(document.myform.fname.value.trim().length == 0){
+					//alert("First Name needs a value.");
+					document.getElementById("fnameError").innerHTML = "<strong>First name needs a value.</strong>";
+				}
+				else{
+					document.getElementById("fnameError").innerHTML = "";
+				}
+			}
+			function validateLastName(){
+				if(document.myform.lname.value.trim().length == 0){
+					//alert("Last Name needs value");
+					document.getElementById("lnameError").innerHTML = "Last name needs a value.";
+				}
+			}
+			function validateForm(){
+/* 				if(document.myform.fname.value.trim().length == 0 || document.myform.lname.value.trim().length == 0){
+					return false;
+				}
+				return true; */
+ 				var xhttp = new XMLHttpRequest();
+				xhttp.open("GET", "validateForm?fname=" + document.myform.fname.value + "&" + "lname=" + document.myform.lname.value, false);
+				xhttp.send();
+				if(xhttp.responseText.trim().length > 0){
+				//There was an error
+					alert(xhttp.responseText);
+					return false;
+				}
+				return true;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h2>My Validation Form</h2>
+		<form name ="myform" action= "submit.jsp" method = "GET" onsubmit= "return validateForm()">
+		First Name <input type="text" name="fname" onblur="validateFirstName()" />
+		<span id="fnameError"></span>
+		<br />
+		Last Name <input type="text" name="lname" onblur="validateLastName()" />
+		<span id="lnameError"></span>
+		<br />
+		<input type="submit" value="Submit Form" />
+	</form>
+	</body>
+</html>

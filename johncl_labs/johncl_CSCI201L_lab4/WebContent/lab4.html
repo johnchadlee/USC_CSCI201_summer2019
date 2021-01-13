@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Form Validation with Servlets and JSPs</title>
+		<script>
+			function validatePetName(){
+				if(document.myform.pname.value.trim().length == 0){
+					document.getElementById("pnameError").innerHTML = "<strong>Pet's name missing.</strong>";
+				}
+			}
+			function validateOwnerName(){
+				if(document.myform.oname.value.trim().length == 0){
+					//alert("Last Name needs value");
+					document.getElementById("onameError").innerHTML = "<strong>Owner's name missing.</strong>";
+				}
+			}
+			function validateForm(){
+				var xhttp = new XMLHttpRequest();
+				xhttp.open("GET", "Lab4_Servlet?pname=" + document.myform.pname.value + "&" + "oname=" + document.myform.oname.value + 
+						"&" + "emessage=" + document.myform.emessage.value , false);
+				xhttp.send();
+				if(xhttp.responseText.trim().length > 0){
+					//There was an error
+					alert(xhttp.responseText);
+					return false;
+				}
+				return true;
+			}
+			function validateEmail(){
+				if(document.myform.emessage.value.trim().length == 0){
+					document.getElementById("emailError").innerHTML = "<strong>Email missing.</strong>";
+				}
+			}
+			function reset() {
+				  document.getElementById("myform").reset();
+			}
+			function date(){
+				var d = new Date();
+				var n = d.getMonth();
+				document.getElementById("demo").innerHTML = n;
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Date:</h2>
+	    <button onclick="date()">Get Today's date</button>
+        <p id="demo"></p>
+		<h2>Fill in this table</h2>
+		<form name ="myform" action= "submit.jsp" method = "GET" onsubmit= "return validateForm()">
+		Pet's Name <input type="text" name="pname" onblur="validatePetName()" />
+		<span id="pnameError"></span>
+		<br />
+		Owner's Name <input type="text" name="oname" onblur="validateOwnerName()" />
+		<span id="onameError"></span>
+		<br />
+		Email <input type="text" name="emessage" onblur="validateEmail()" />
+		<span id="emailError"></span>
+		<br />
+		Gender
+		<select>
+  			<option value="Male">Male</option>
+  			<option value="Female">Female</option>
+		</select>
+		<br />
+		Address:<br>
+		<textarea id="myTextarea">
+		</textarea>
+		
+		<input type="button" onclick="reset()" value="Reset form">
+		<input type="submit" value="Submit Form" />
+		
+		<h2>Pet Description</h2>
+        <p>
+          <form name="petform" method="GET" action="lab4.html"> 
+            <input type="radio" name="petclass" value="Cat">Cat</input>
+            <input type="radio" name="petclass" value="Dog">Dog</input>
+            <input type="radio" name="petclass" value="Horse">Horse</input><br />
+            <input type="submit" name="submit" value="Click Me" />
+          </form>
+        </p>
+	</form>
+	</body>
+</html>
